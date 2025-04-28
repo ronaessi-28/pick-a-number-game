@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pick a Number Game</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div id="homeScreen">
+        <h1>Pick a Number Game 🎯</h1>
+        <input type="text" id="nameInput" placeholder="Enter Your Name">
+        <br><br>
+        <button id="createGameBtn">Create Game</button>
+        <input type="text" id="joinInput" placeholder="Enter Game Code">
+        <button id="joinGameBtn">Join Game</button>
+        <p id="gameCodeDisplay"></p>
+        <p id="statusMessage"></p>
+    </div>
+    
+
+    <div id="gameScreen" style="display: none;">
+        <h2 id="turnInfo">Waiting...</h2>
+        <div id="buttonsGrid"></div>
+
+        <div id="questionSection" style="display: none;">
+            <h3 id="questionText"></h3>
+            <input type="text" id="answerInput" placeholder="Type your answer...">
+            <button id="submitAnswerBtn">Submit Answer</button>
+        </div>
+
+        <div id="answerSection" style="display: none;">
+            <h3>Opponent's Answer:</h3>
+            <p id="opponentAnswer"></p>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/client.js"></script>
+</body>
+</html>
